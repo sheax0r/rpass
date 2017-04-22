@@ -6,8 +6,8 @@ require "rpass/version"
 Gem::Specification.new do |spec|
   spec.name          = "rpass"
   spec.version       = Rpass::VERSION
-  spec.authors       = ["TODO: Write your name"]
-  spec.email         = ["michael.shea@heroku.com"]
+  spec.authors       = ["Michael Shea"]
+  spec.email         = ["mike.shea@gmail.com"]
 
   spec.summary       = "Reasonable lastpass CLI"
   spec.description   = "A reasonable lastpass CLI"
@@ -16,7 +16,6 @@ Gem::Specification.new do |spec|
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
   raise "RubyGems 2.0 or newer is required to protect against public gem pushes." unless spec.respond_to?(:metadata)
-  spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"
@@ -33,4 +32,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "clamp"
   spec.add_dependency "lastpass"
   spec.add_dependency "highline"
+  spec.add_dependency "cli-console"
+  spec.add_dependency "pbcopy"
+  spec.add_dependency "colorize"
 end

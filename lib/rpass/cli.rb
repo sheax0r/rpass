@@ -1,15 +1,12 @@
 require "clamp"
 require "lastpass"
-require "rpass/ls"
-require "rpass/show"
+require "rpass/shell_command"
 
 module RPass
   class CLI < Clamp::Command
-    subcommand "ls", "List items in lastpass", RPass::LS
-    subcommand "show", "Show a value from lastpass", RPass::Show
+    self.default_subcommand = "shell"
 
-    def execute
-    end
+    subcommand "shell", "Interactive shell", RPass::ShellCommand
   end
 end
 
